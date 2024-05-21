@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#content1').keyup(function() {
+            var characterCount = $(this).val().length,
+                current = $('#current_count'),
+                maximum = $('#maximum_count'),
+                theCount = $('#the-count');
+            current.text(characterCount);
+        });
+    });
+</script>
+
+<style>
+    #the-count {
+        float: right;
+        padding: 0.1rem 0 0 0;
+        font-size: 0.875rem;
+    }
+
+    textarea::placeholder { 
+        font-style: italic;
+        font-size: 0.875rem;
+    }
+</style>
+
+<br>
+
+<h1>{% block title %} Create a New Post {% endblock %}</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" name="title"
+               placeholder="Note title!!!" class="form-control"
+               value="{{ request.form['title'] }}">
+    </div>
+
+    <div class="form-group">
+        <label for="content">Content</label>
+        <textarea name="content" id="content1" placeholder="Enter the textarea input here.. (limited to 500 characters)" autofocus
+                  class="form-control" maxlength="500">{{ request.form['content'] }}</textarea>
+        <div id="the-count">
+            <span id="current_count">0</span>
+            <span id="maximum_count">/ 500</span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>
+    
+{% endblock %}
