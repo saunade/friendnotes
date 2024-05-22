@@ -3,16 +3,22 @@
 
 {% block content %}
 <br>
-
-    <h1>Sanna's FriendNotes :D</h1>
+<div class="title">
+    <h1>FriendNotes</h1>
+</div>
+    
 <br>
+<ul>
     {% for post in posts %}
+    <div class="block2">
         <a href="{{ url_for('post', post_id=post['id']) }}">
             <h2>{{ post['title'] }}</h2>
         </a>
 
         <p>{{ post['content'] }}</p>
         <span class="badge badge-primary">{{ post['created'] }}</span>
-        <hr>
+    
+    </div>
     {% endfor %}
+</ul>
 {% endblock %}

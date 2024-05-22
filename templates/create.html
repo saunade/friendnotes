@@ -30,30 +30,33 @@
 </style>
 
 <br>
-
-<h1>{% block title %} Create a New Post {% endblock %}</h1>
-
-<form method="post">
-    <div class="form-group">
-        <label for="title">Title</label>
-        <input type="text" name="title"
-               placeholder="Note title!!!" class="form-control"
-               value="{{ request.form['title'] }}">
+<div class="block">
+    <div class="create">
+        <h1>{% block title %} Create a New Post {% endblock %}</h1>
     </div>
-
-    <div class="form-group">
-        <label for="content">Content</label>
-        <textarea name="content" id="content1" placeholder="Enter the textarea input here.. (limited to 500 characters)" autofocus
-                  class="form-control" maxlength="500">{{ request.form['content'] }}</textarea>
-        <div id="the-count">
-            <span id="current_count">0</span>
-            <span id="maximum_count">/ 500</span>
+    
+    <form method="post">
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" name="title"
+                placeholder="Note title!!!" class="form-control"
+                value="{{ request.form['title'] }}">
         </div>
-    </div>
 
-    <div class="form-group">
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </div>
-</form>
+        <div class="form-group">
+            <label for="content">Content</label>
+            <textarea name="content" id="content1" placeholder="Enter the textarea input here.. (limited to 500 characters)" autofocus
+                    class="form-control" maxlength="500">{{ request.form['content'] }}</textarea>
+            <div id="the-count">
+                <span id="current_count">0</span>
+                <span id="maximum_count">/ 500</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+</div>
     
 {% endblock %}
