@@ -1,7 +1,84 @@
-h1 {
-    border: 2px #eee solid;
-    color: brown;
-    text-align: center;
-    padding: 10px;
+@import url('https://fonts.googleapis.com/css2?family=Freeman&display=swap');
+
+body {
+    background-color: #2b2d42;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+.title h1 {
+    color: #edf2f4;
+    text-align: center;
+    padding: 10px;
+    font-family: "Freeman", sans-serif;
+    font-size: 70px;
+}
+
+/* nav bar */
+.navbar {
+    background-color: #0b132b;
+}
+
+.navbar-brand {
+    font-family: "Freeman", sans-serif;
+    color: #edf2f4;
+    padding-right: 35px;
+}
+
+.nav-link {
+    color: white;
+    font-family:'Monaco', Courier, monospace;
+}
+
+.nav-item {
+    padding-right: 20px;
+}
+
+/* about page */
+.block {
+    background-color: #ebf2fa;
+    border-radius: 30px;
+    opacity: 90%;
+    padding: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 800px;
+    height: 375px;
+    margin: -205px 0 0 -400px;
+}
+
+.about h1 {
+    color: #26547c;
+    text-align: center;
+    padding-top: 10px;
+    font-family: "Freeman", sans-serif;
+    font-size: 50px;
+}
+
+.block p {
+    padding-left: 50px;
+}
+
+.create h1 {
+    color: #26547c;
+    font-family: "Freeman", sans-serif;
+}
+
+.block2 {
+    background-color: #ebf2fa;
+    margin-bottom: 20px;
+    padding: 20px 30px 20px 30px;
+    border-radius: 30px;
+}
+
+.block3 {
+    background-color: #ebf2fa;
+    border-radius: 30px;
+    padding: 20px 30px 20px 30px;
+    top: 50%;
+    left: 50%;
+    margin: 200px 0 0 50px;
+}
